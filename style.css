@@ -6,7 +6,7 @@
 :root{
     --colligth: white;
     --coldark: rgb(66, 58, 58);
-    --colmid: #ffc53d;
+    --colmid: #44d3e6;
 }
 html{
     font-family: 'Raleway', sans-serif;
@@ -14,7 +14,7 @@ html{
 }
 
 
-/* Header */
+/* NAWIGACJA*/
 nav{
     display: flex;
     justify-content: space-between;
@@ -31,13 +31,6 @@ nav div{
 nav>div>b{
     padding-left:0.5rem;
 }
-header{
-    height:90vh;
-    background-image: url(img/chair-1840526_1920.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
 
 li{
     display: inline-block;
@@ -51,4 +44,31 @@ nav a{
     color: var(--coldark);
     letter-spacing: 0.2rem;
 }
+/* HEADER */
 
+header{
+    position:relative;
+    height:90vh;
+    background-image: url(img/chair-1840526_1920.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+header>div{
+    position: absolute;
+    top: 20%;
+    left:50%;
+    transform: translateX(-50%)
+}
+
+h1{
+    font-size: 10rem;
+    color: var(--colmid);
+}
+h2{
+    text-align: center;
+    font-size: 3.6rem;
+    color: var(--colligth);
+}
+
+
+/* SEKCJA PIERWSZA */
