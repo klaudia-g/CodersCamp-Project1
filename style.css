@@ -7,13 +7,29 @@
     --colligth: white;
     --coldark: rgb(66, 58, 58);
     --colmid: #44d3e6;
+    --colmiddarker: #1e626b;
 }
 html{
     font-family: 'Raleway', sans-serif;
     font-size: 10px;
+    color: var(--coldark)
 }
 
-
+body{
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+section{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 /* NAWIGACJA*/
 nav{
     display: flex;
@@ -21,9 +37,10 @@ nav{
     align-items: flex-end;
     min-height: 8rem;
     padding-bottom: 2rem;
+    background-color: white;
 }
 nav div{
-    padding-left: 10rem;
+    padding-left: 5vw;
     font-size: 2.4rem;
     color: var(--coldark);
     letter-spacing: 0.2rem;
@@ -48,16 +65,17 @@ nav a{
 
 header{
     position:relative;
-    height:90vh;
+    height:100vh;
+    width: 100%;
     background-image: url(img/chair-1840526_1920.jpg);
     background-size: cover;
     background-attachment: fixed;
     }
 header>div{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left:50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
 }
 
 h1{
@@ -71,4 +89,132 @@ h2{
 }
 
 
-/* SEKCJA PIERWSZA */
+/* SEKCJA PIERWSZA HELP */
+.help{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem;
+    min-height: 22rem;
+    
+}
+.help div{
+    display:flex;
+    justify-content: space-between;
+    min-width: 50rem;
+}
+section>h2{
+    font-weight: normal;
+    color:var(--coldark);
+}
+
+button{
+    width: 20rem;
+    color: var(--colligth);
+    background-image: linear-gradient(90deg, var(--colmiddarker),var(--colmid));
+    border:1px solid white;
+    border-radius: 15px;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    border: 1px solid var(--colmid);
+    background-image: linear-gradient(white,white);
+    color: var(--colmid);
+}
+
+/* SEKCJE ABOUT I SKILLS */
+.about, .skills{
+    width:100%;
+    margin: auto;
+}
+
+h3, h4, .about>div, .skills>div{
+    width:80%;
+    margin: 2rem auto;
+}
+
+
+
+
+/* SEKCJA DRUGA ABOUT ME */
+
+.about{
+    width:100%;
+    border: 1px solid red;
+    
+}
+h3{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3.2rem;
+    
+
+}
+.about>div{
+    height: 30vh;
+    
+    background-color: rgb(134, 120, 120);
+   
+}
+
+
+
+
+/* SEKCJA TRZECIA SKILLS */
+h4{
+    font-size: 3.2rem;
+}
+
+.skills>div{
+    height: 30vh;
+    width: 80%;
+    background-color: rgb(134, 120, 120);
+}
+
+
+/* SEKCJA CZWARTA PORTFOLIO */
+.portfolio h2{
+    
+}
+div.wrapper{
+    
+    display: flex;
+    height: 50vh;
+}
+
+.wrapper div{
+    overflow: hidden;
+    width: 200px;
+}
+
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover; 
+}
+
+.wrapper div.item1{
+    background-image: url(img/1_big.jpg);
+    background-size: cover;
+    width: 40%;
+}
+
+ div.item2, div.item4{
+    width:30%;
+}
+
+div.item3{
+    flex-grow:1;
+}
+
+.wrapper div.item5{
+    background-image: url(img/5_big.jpg);
+    background-size: cover;
+    width: 40%;
+    flex-grow: 1;
+}
+
+
