@@ -15,7 +15,7 @@ html{
     color: var(--coldark)
 }
 
-body{
+.container{
     max-width: 1400px; 
     margin: 0 auto;
 }
@@ -45,7 +45,7 @@ nav div{
     color: var(--coldark);
     letter-spacing: 0.2rem;
 }
-nav>div>b{
+b{
     padding-left:0.5rem;
 }
 
@@ -54,12 +54,14 @@ li{
     list-style: none;
     padding:0 2rem 0 2rem;
 }
-nav a{
+a{
     text-decoration: none;
     font-size: 1.8rem;
+       }
+nav a{
     font-weight: bold;
-    color: var(--coldark);
     letter-spacing: 0.2rem;
+    color: var(--coldark);
 }
 /* HEADER */
 
@@ -119,6 +121,7 @@ button{
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
+    transition: .3s;
 }
 button:hover{
     border: 1px solid var(--colmid);
@@ -130,55 +133,107 @@ button:hover{
 .about, .skills{
     width:100%;
     margin: auto;
+    padding-bottom:4rem;
 }
 
 h3, h4, .about>div, .skills>div{
-    width:80%;
+    width:85%;
     margin: 2rem auto;
 }
 
-
-
-
-/* SEKCJA DRUGA ABOUT ME */
-
-.about{
-    width:100%;
-    border: 1px solid red;
-    
+.about>div, .skills>div{
+    display:flex;
+    justify-content: space-around;
+    height: 40vh;
+    padding: 4rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem rgba(190, 184, 184, 0.781);
 }
+
+.line{
+    height:100%;
+    width:0;
+    border-left:5px dotted var(--colmid);
+}
+/* SEKCJA DRUGA ABOUT ME */
+.about{
+    background-image: linear-gradient(90deg, rgba(230, 229, 227, 0.13) 70%, transparent 70%, transparent 100%);
+}
+ 
 h3{
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.2rem;
-    
+    }
 
+
+.circle{
+    width: 15rem;
+    height:15rem;
+    border-radius: 50%;
+    overflow: hidden;
 }
-.about>div{
-    height: 30vh;
-    
-    background-color: rgb(134, 120, 120);
-   
+.circle+div{
+    font-weight: bold;
 }
 
-
+.about p{
+    font-size: 1.8rem;
+    line-height: 3rem;
+    
+}
+span{
+    color: var(--colmid);
+    
+}
+.about>div>p:last-child{
+   max-width: 55%;
+}
 
 
 /* SEKCJA TRZECIA SKILLS */
+.skills{
+    margin-top:4rem;
+    background-image: linear-gradient(90deg,transparent 30%,  rgba(230, 229, 227, 0.13)  30%,  rgba(230, 229, 227, 0.13)  100%);
+}
 h4{
     font-size: 3.2rem;
 }
-
-.skills>div{
-    height: 30vh;
-    width: 80%;
-    background-color: rgb(134, 120, 120);
+.skills h4{
+    padding-left:30vw;
 }
-
+.box{
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--coldark);
+    width: 20rem;
+}
+.box img{
+    width:50%;
+    height:auto;
+}
+.box img+p{
+    color: var(--colmid);
+    font-weight: bold;
+}
 
 /* SEKCJA CZWARTA PORTFOLIO */
 .portfolio h2{
-    
+text-align: left;   
 }
+
+.portfolio h4{
+    text-align: center;   
+    }
+.portfolio p{
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    color: var(--colligth);
+}
+.portfolio button{
+    width: auto;
+    border: none;
+}
+
 div.wrapper{
     
     display: flex;
@@ -195,14 +250,7 @@ img{
     height:100%;
     object-fit: cover; 
 }
-
-.wrapper div.item1{
-    background-image: url(img/1_big.jpg);
-    background-size: cover;
-    width: 40%;
-}
-
- div.item2, div.item4{
+div.item2, div.item4{
     width:30%;
 }
 
@@ -210,11 +258,126 @@ div.item3{
     flex-grow:1;
 }
 
-.wrapper div.item5{
-    background-image: url(img/5_big.jpg);
+
+ div.item1{
+    position: relative;
+    background-image: url(img/1_big.jpg);
     background-size: cover;
     width: 40%;
+    
+}
+div.item5{
+    position: relative;
+    background-image: url(img/5_big.jpg);
+    background-size: cover;
     flex-grow: 1;
+    
 }
 
+div.item1>div, div.item5>div{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    padding: 2rem;
+}
 
+ div.item1::before,  div.item5::before {
+    content: "";
+    display:block;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( var(--coldark),var(--colmid))
+}
+
+/* SEKCJA PIĄTA CONTACT */
+.contact h2{
+    color: var(--coldark);
+    margin-bottom:1em;
+    text-align: left;
+}
+.contact button{
+    width:auto;
+   position: absolute;
+   right: 3rem;
+   bottom:3rem;
+}
+
+.wrap{
+    position: relative;
+    width:85%;
+    height:90vh;
+    margin: 2rem auto;
+}
+.info, .form{
+    height:100%;
+    padding: 4rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--colmiddarker);
+    width:40%;
+}
+.form{
+    position: absolute;
+    top:0;
+    left:40%; 
+    width:60%; 
+    box-shadow: 10px 0 3rem rgba(190, 184, 184, 0.527);
+}
+form>*{
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+input, textarea{
+    height: 4rem;
+    border:none;
+    background-color:rgba(230, 229, 227, 0.13);
+    padding: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8rem;
+    resize: none;
+}
+ textarea{
+    height: 16rem;
+}
+input:first-of-type{
+    box-shadow: inset 0 4px 0.5rem rgba(32, 30, 41, 0.164);
+}
+.info img{
+    width:5em;
+    height: auto;
+    transform: rotate(-25deg);
+    margin-bottom: 2rem;
+}
+.info p {
+    color: var(--colligth);
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+.down p{
+    font-family: 'Ubuntu', sans-serif;
+}
+.down p:nth-of-type(1), .down p:nth-of-type(2){
+    font-weight: bold;
+}
+.down a{
+    color: var(--colligth);
+    text-decoration: underline;
+}
+.up{
+    max-width: 75%;
+}
