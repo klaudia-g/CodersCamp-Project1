@@ -27,5 +27,3 @@ To-do list:
 ## Status
 Project is: _in progress_
 
-## Inspiration
-https://www.figma.com/file/imz81mJf8mRpA62bzVOxWE/Portfolio-page-Coders-Camp?node-id=0%3A1
