@@ -1,4 +1,4 @@
-# CodersCamp-Projekt1
+# CodersCamp-Project1
 > example portfolio page based on mockup provided from CodersCamp
 
 ## Table of contents
@@ -9,7 +9,7 @@
 * [Inspiration](#inspiration)
 
 ## General info
-This porfolio page is made for first projekt in CodersCamp made by CodersCrew
+This porfolio page is made for first project in CodersCamp made by CodersCrew
 
 ## Technologies
 * HTML
